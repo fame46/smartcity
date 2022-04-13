@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.BerandaFragment">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appbar">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:layout_marginBottom="@dimen/dp_8"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="0dp"
+                        tools:targetApi="lollipop">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/layoutBanner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ss.com.bannerslider.Slider
+                                    android:id="@+id/banner_slider"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    app:layout_constraintDimensionRatio="H,16:6"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:slider_animateIndicators="true"
+                                    app:slider_defaultBanner="1"
+                                    app:slider_indicatorSize="@dimen/dp_8"
+                                    app:slider_loopSlides="true" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etCari"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:background="@drawable/border"
+                    android:clickable="true"
+                    android:drawableEnd="@drawable/ic_baseline_search_24"
+                    android:focusable="true"
+                    android:gravity="top"
+                    android:hint="Cari nama atau nip disini..."
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:padding="@dimen/dp_16"
+                    android:singleLine="false"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black_tua_hehe"
+                    android:textSize="@dimen/sp_14"
+                    tools:ignore="RtlHardcoded,TextFields" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_16">
+
+                    <!--                    &lt;!&ndash; BARIS 1 &ndash;&gt;-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <!-- ICON 1.1 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="vertical"
+                                android:padding="@dimen/dp_4">
+
+                                <RelativeLayout
+                                    android:layout_width="@dimen/dp_72"
+                                    android:layout_height="@dimen/dp_72"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/border_rouncube"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:foreground="?attr/selectableItemBackground"
+                                    tools:ignore="UnusedAttribute">
+
+                                    <ImageView
+                                        android:id="@+id/btnObjekWisata"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:padding="@dimen/dp_4"
+                                        android:src="@drawable/tiket" />
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_4"
+                                    android:layout_marginBottom="@dimen/dp_4"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:text="Tombol Darurat"
+                                    android:textColor="@color/black_tua_hehe"
+                                    android:textSize="@dimen/sp_12" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- ICON 1.2 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="vertical"
+                                android:padding="@dimen/dp_4">
+
+                                <RelativeLayout
+                                    android:layout_width="@dimen/dp_72"
+                                    android:layout_height="@dimen/dp_72"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/border_rouncube"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:foreground="?attr/selectableItemBackground"
+                                    tools:ignore="UnusedAttribute">
+
+                                    <ImageView
+                                        android:id="@+id/btnDesaWisata"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:padding="@dimen/dp_4"
+                                        android:src="@drawable/tiket" />
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_4"
+                                    android:layout_marginBottom="@dimen/dp_4"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:text="Laksa"
+                                    android:textColor="@color/black_tua_hehe"
+                                    android:textSize="@dimen/sp_12" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- ICON 1.3 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="vertical"
+                                android:padding="@dimen/dp_4">
+
+                                <RelativeLayout
+                                    android:layout_width="@dimen/dp_72"
+                                    android:layout_height="@dimen/dp_72"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/border_rouncube"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:foreground="?attr/selectableItemBackground"
+                                    tools:ignore="UnusedAttribute">
+
+                                    <ImageView
+                                        android:id="@+id/btnPenginapan"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:padding="@dimen/dp_4"
+                                        android:src="@drawable/tiket" />
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_4"
+                                    android:layout_marginBottom="@dimen/dp_4"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:text="Aman Bersama"
+                                    android:textColor="@color/black_tua_hehe"
+                                    android:textSize="@dimen/sp_12" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- ICON 1.4 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="vertical"
+                                android:padding="@dimen/dp_4">
+
+                                <RelativeLayout
+                                    android:layout_width="@dimen/dp_72"
+                                    android:layout_height="@dimen/dp_72"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/border_rouncube"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:foreground="?attr/selectableItemBackground"
+                                    tools:ignore="UnusedAttribute">
+
+                                    <ImageView
+                                        android:id="@+id/btnKuliner"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:padding="@dimen/dp_4"
+                                        android:src="@drawable/tiket" />
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_4"
+                                    android:layout_marginBottom="@dimen/dp_4"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:text="Pengantar Rt"
+                                    android:textColor="@color/black_tua_hehe"
+                                    android:textSize="@dimen/sp_12" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <!-- ICON 1.1 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="vertical"
+                                android:padding="@dimen/dp_4">
+
+                                <RelativeLayout
+                                    android:layout_width="@dimen/dp_72"
+                                    android:layout_height="@dimen/dp_72"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/border_rouncube"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:foreground="?attr/selectableItemBackground"
+                                    tools:ignore="UnusedAttribute">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:padding="@dimen/dp_4"
+                                        android:src="@drawable/tiket" />
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_4"
+                                    android:layout_marginBottom="@dimen/dp_4"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:text="Tombol Darurat"
+                                    android:textColor="@color/black_tua_hehe"
+                                    android:textSize="@dimen/sp_12" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- ICON 1.2 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="vertical"
+                                android:padding="@dimen/dp_4">
+
+                                <RelativeLayout
+                                    android:layout_width="@dimen/dp_72"
+                                    android:layout_height="@dimen/dp_72"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/border_rouncube"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:foreground="?attr/selectableItemBackground"
+                                    tools:ignore="UnusedAttribute">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:padding="@dimen/dp_4"
+                                        android:src="@drawable/tiket" />
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_4"
+                                    android:layout_marginBottom="@dimen/dp_4"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:text="Laksa"
+                                    android:textColor="@color/black_tua_hehe"
+                                    android:textSize="@dimen/sp_12" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- ICON 1.3 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="vertical"
+                                android:padding="@dimen/dp_4">
+
+                                <RelativeLayout
+                                    android:layout_width="@dimen/dp_72"
+                                    android:layout_height="@dimen/dp_72"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/border_rouncube"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:foreground="?attr/selectableItemBackground"
+                                    tools:ignore="UnusedAttribute">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:padding="@dimen/dp_4"
+                                        android:src="@drawable/tiket" />
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_4"
+                                    android:layout_marginBottom="@dimen/dp_4"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:text="Aman Bersama"
+                                    android:textColor="@color/black_tua_hehe"
+                                    android:textSize="@dimen/sp_12" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- ICON 1.4 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="vertical"
+                                android:padding="@dimen/dp_4">
+
+                                <RelativeLayout
+                                    android:layout_width="@dimen/dp_72"
+                                    android:layout_height="@dimen/dp_72"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/border_rouncube"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:foreground="?attr/selectableItemBackground"
+                                    tools:ignore="UnusedAttribute">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:padding="@dimen/dp_4"
+                                        android:src="@drawable/tiket" />
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_4"
+                                    android:layout_marginBottom="@dimen/dp_4"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center"
+                                    android:text="Pengantar Rt"
+                                    android:textColor="@color/black_tua_hehe"
+                                    android:textSize="@dimen/sp_12" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutInfoJeknyong"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_16">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="@dimen/dp_8"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center_vertical"
+                            android:text="Berita Kota"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="@dimen/dp_8"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="end"
+                            android:text="Lihat semua"
+                            android:textColor="@color/gray_tua"
+                            android:textSize="@dimen/sp_14" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="4dp"
+                            app:cardElevation="0dp"
+                            tools:targetApi="lollipop">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ss.com.bannerslider.Slider
+                                        android:id="@+id/banner_slider_info"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        app:layout_constraintDimensionRatio="H,16:6"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:slider_animateIndicators="true"
+                                        app:slider_defaultBanner="1"
+                                        app:slider_indicatorSize="@dimen/dp_8"
+                                        app:slider_loopSlides="true" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_16">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="@dimen/dp_8"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center_vertical"
+                            android:text="Berita Kota"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_16"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="@dimen/dp_8"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="end"
+                            android:text="Lihat semua"
+                            android:textColor="@color/gray_tua"
+                            android:textSize="@dimen/sp_14" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="4dp"
+                            app:cardElevation="0dp"
+                            tools:targetApi="lollipop">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ss.com.bannerslider.Slider
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        app:layout_constraintDimensionRatio="H,16:6"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:slider_animateIndicators="true"
+                                        app:slider_defaultBanner="1"
+                                        app:slider_indicatorSize="@dimen/dp_8"
+                                        app:slider_loopSlides="true" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</FrameLayout>
