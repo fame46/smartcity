@@ -21,14 +21,22 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/white">
 
+
+            <ImageView
+                android:id="@+id/icon_logo"
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/icon_sm"/>
+
             <TextView
-                android:text="SMART CITY"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:textSize="@dimen/sp_20"
-                android:textColor="@color/black"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="SMART CITY"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_20"
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/btnAkun"
@@ -57,8 +65,8 @@
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/appbar"
         android:layout_above="@+id/nav_view"
+        android:layout_below="@id/appbar"
         android:layout_marginBottom="2dp" />
 
     <LinearLayout

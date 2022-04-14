@@ -134,7 +134,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:padding="@dimen/dp_4"
-                                        android:src="@drawable/tiket" />
+                                        android:src="@drawable/sirine" />
                                 </RelativeLayout>
 
                                 <TextView
@@ -144,7 +144,7 @@
                                     android:layout_marginBottom="@dimen/dp_4"
                                     android:fontFamily="sans-serif"
                                     android:gravity="center"
-                                    android:text="Tombol Darurat"
+                                    android:text="PSC 119"
                                     android:textColor="@color/black_tua_hehe"
                                     android:textSize="@dimen/sp_12" />
                             </LinearLayout>
@@ -180,7 +180,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:padding="@dimen/dp_4"
-                                        android:src="@drawable/tiket" />
+                                        android:src="@drawable/gratis" />
                                 </RelativeLayout>
 
                                 <TextView
@@ -190,7 +190,7 @@
                                     android:layout_marginBottom="@dimen/dp_4"
                                     android:fontFamily="sans-serif"
                                     android:gravity="center"
-                                    android:text="Laksa"
+                                    android:text="Gratis Kabeh"
                                     android:textColor="@color/black_tua_hehe"
                                     android:textSize="@dimen/sp_12" />
                             </LinearLayout>
@@ -226,7 +226,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:padding="@dimen/dp_4"
-                                        android:src="@drawable/tiket" />
+                                        android:src="@drawable/ppdb" />
                                 </RelativeLayout>
 
                                 <TextView
@@ -236,7 +236,7 @@
                                     android:layout_marginBottom="@dimen/dp_4"
                                     android:fontFamily="sans-serif"
                                     android:gravity="center"
-                                    android:text="Aman Bersama"
+                                    android:text="PPDB Online"
                                     android:textColor="@color/black_tua_hehe"
                                     android:textSize="@dimen/sp_12" />
                             </LinearLayout>
@@ -272,7 +272,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:padding="@dimen/dp_4"
-                                        android:src="@drawable/tiket" />
+                                        android:src="@drawable/dolan" />
                                 </RelativeLayout>
 
                                 <TextView
@@ -282,7 +282,7 @@
                                     android:layout_marginBottom="@dimen/dp_4"
                                     android:fontFamily="sans-serif"
                                     android:gravity="center"
-                                    android:text="Pengantar Rt"
+                                    android:text="Dolan Banyumas"
                                     android:textColor="@color/black_tua_hehe"
                                     android:textSize="@dimen/sp_12" />
                             </LinearLayout>
@@ -325,7 +325,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:padding="@dimen/dp_4"
-                                        android:src="@drawable/tiket" />
+                                        android:src="@drawable/perizinan" />
                                 </RelativeLayout>
 
                                 <TextView
@@ -335,7 +335,7 @@
                                     android:layout_marginBottom="@dimen/dp_4"
                                     android:fontFamily="sans-serif"
                                     android:gravity="center"
-                                    android:text="Tombol Darurat"
+                                    android:text="Perizinan Online"
                                     android:textColor="@color/black_tua_hehe"
                                     android:textSize="@dimen/sp_12" />
                             </LinearLayout>
@@ -370,7 +370,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:padding="@dimen/dp_4"
-                                        android:src="@drawable/tiket" />
+                                        android:src="@drawable/eling" />
                                 </RelativeLayout>
 
                                 <TextView
@@ -380,7 +380,7 @@
                                     android:layout_marginBottom="@dimen/dp_4"
                                     android:fontFamily="sans-serif"
                                     android:gravity="center"
-                                    android:text="Laksa"
+                                    android:text="Eling SPT"
                                     android:textColor="@color/black_tua_hehe"
                                     android:textSize="@dimen/sp_12" />
                             </LinearLayout>
@@ -415,7 +415,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:padding="@dimen/dp_4"
-                                        android:src="@drawable/tiket" />
+                                        android:src="@drawable/jeknyong" />
                                 </RelativeLayout>
 
                                 <TextView
@@ -425,7 +425,7 @@
                                     android:layout_marginBottom="@dimen/dp_4"
                                     android:fontFamily="sans-serif"
                                     android:gravity="center"
-                                    android:text="Aman Bersama"
+                                    android:text="Jeknyong"
                                     android:textColor="@color/black_tua_hehe"
                                     android:textSize="@dimen/sp_12" />
                             </LinearLayout>
@@ -460,7 +460,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:padding="@dimen/dp_4"
-                                        android:src="@drawable/tiket" />
+                                        android:src="@drawable/lainnya" />
                                 </RelativeLayout>
 
                                 <TextView
@@ -470,7 +470,7 @@
                                     android:layout_marginBottom="@dimen/dp_4"
                                     android:fontFamily="sans-serif"
                                     android:gravity="center"
-                                    android:text="Pengantar Rt"
+                                    android:text="Lainnya"
                                     android:textColor="@color/black_tua_hehe"
                                     android:textSize="@dimen/sp_12" />
                             </LinearLayout>
