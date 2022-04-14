@@ -39,4 +39,7 @@ dependencies {
 
     //TODO : https://github.com/saeedsh92/Banner-Slider
     implementation 'com.ss.bannerslider:bannerslider:2.0.0'
+
+    //picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
 }
