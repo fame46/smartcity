@@ -9,6 +9,9 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
 import id.fame.smartcity.Adapter.MainSliderAdapter;
 import id.fame.smartcity.R;
@@ -19,6 +22,9 @@ public class BerandaFragment extends Fragment {
     
     SwipeRefreshLayout swipeRefresh;
     Slider bannerSlider;
+    ImageView ivLainnya;
+    View BottomSheet;
+    BottomSheetBehavior SheetBehavior;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -29,6 +35,8 @@ public class BerandaFragment extends Fragment {
 
         swipeRefresh = v.findViewById(R.id.swipeRefresh);
         bannerSlider = v.findViewById(R.id.banner_slider);
+        ivLainnya = v.findViewById(R.id.ivLainnya);
+        BottomSheet = v.findViewById(R.id.bottomSheet);
         swipeRefresh.setOnRefreshListener(this::initComponent);
 
         Slider.init(new PicassoImageLoadingService(getContext()));
@@ -41,6 +49,14 @@ public class BerandaFragment extends Fragment {
 //                startActivity(new Intent(context, WebviewActivity.class).putExtra("data", listBanner.get(position).getLink()));
 //            }
 //        });
+
+        SheetBehavior = BottomSheetBehavior.from(BottomSheet);
+        SheetBehavior.setHideable(true);
+        SheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+
+        ivLainnya.setOnClickListener(x -> {
+            SheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+        });
 
         return v;
 

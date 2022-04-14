@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -457,6 +457,7 @@
                                     tools:ignore="UnusedAttribute">
 
                                     <ImageView
+                                        android:id="@+id/ivLainnya"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:padding="@dimen/dp_4"
@@ -645,4 +646,439 @@
         </androidx.core.widget.NestedScrollView>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-</FrameLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-32sp"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0sp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dp_16"
+        app:cardElevation="@dimen/dp_16"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingPrefix">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="5dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp_12"
+                app:cardBackgroundColor="#E0E0E0"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="1dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_8"
+                android:text="MENU"
+                android:gravity="center"
+                android:textColor="@color/black_tua_hehe"
+                android:textSize="@dimen/sp_20"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_muda_banget" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_16">
+
+                <!--                    &lt;!&ndash; BARIS 1 &ndash;&gt;-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <!-- ICON 1.1 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_4">
+
+                            <RelativeLayout
+                                android:layout_width="@dimen/dp_72"
+                                android:layout_height="@dimen/dp_72"
+                                android:layout_gravity="center"
+                                android:background="@drawable/border_rouncube"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground"
+                                tools:ignore="UnusedAttribute">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:padding="@dimen/dp_4"
+                                    android:src="@drawable/sirine" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_4"
+                                android:layout_marginBottom="@dimen/dp_4"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:text="PSC 119"
+                                android:textColor="@color/black_tua_hehe"
+                                android:textSize="@dimen/sp_12" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- ICON 1.2 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_4">
+
+                            <RelativeLayout
+                                android:layout_width="@dimen/dp_72"
+                                android:layout_height="@dimen/dp_72"
+                                android:layout_gravity="center"
+                                android:background="@drawable/border_rouncube"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground"
+                                tools:ignore="UnusedAttribute">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:padding="@dimen/dp_4"
+                                    android:src="@drawable/gratis" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_4"
+                                android:layout_marginBottom="@dimen/dp_4"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:text="Gratis Kabeh"
+                                android:textColor="@color/black_tua_hehe"
+                                android:textSize="@dimen/sp_12" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- ICON 1.3 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_4">
+
+                            <RelativeLayout
+                                android:layout_width="@dimen/dp_72"
+                                android:layout_height="@dimen/dp_72"
+                                android:layout_gravity="center"
+                                android:background="@drawable/border_rouncube"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground"
+                                tools:ignore="UnusedAttribute">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:padding="@dimen/dp_4"
+                                    android:src="@drawable/ppdb" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_4"
+                                android:layout_marginBottom="@dimen/dp_4"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:text="PPDB Online"
+                                android:textColor="@color/black_tua_hehe"
+                                android:textSize="@dimen/sp_12" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- ICON 1.4 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_4">
+
+                            <RelativeLayout
+                                android:layout_width="@dimen/dp_72"
+                                android:layout_height="@dimen/dp_72"
+                                android:layout_gravity="center"
+                                android:background="@drawable/border_rouncube"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground"
+                                tools:ignore="UnusedAttribute">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:padding="@dimen/dp_4"
+                                    android:src="@drawable/dolan" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_4"
+                                android:layout_marginBottom="@dimen/dp_4"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:text="Dolan Banyumas"
+                                android:textColor="@color/black_tua_hehe"
+                                android:textSize="@dimen/sp_12" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <!-- ICON 1.1 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_4">
+
+                            <RelativeLayout
+                                android:layout_width="@dimen/dp_72"
+                                android:layout_height="@dimen/dp_72"
+                                android:layout_gravity="center"
+                                android:background="@drawable/border_rouncube"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground"
+                                tools:ignore="UnusedAttribute">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:padding="@dimen/dp_4"
+                                    android:src="@drawable/perizinan" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_4"
+                                android:layout_marginBottom="@dimen/dp_4"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:text="Perizinan Online"
+                                android:textColor="@color/black_tua_hehe"
+                                android:textSize="@dimen/sp_12" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- ICON 1.2 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_4">
+
+                            <RelativeLayout
+                                android:layout_width="@dimen/dp_72"
+                                android:layout_height="@dimen/dp_72"
+                                android:layout_gravity="center"
+                                android:background="@drawable/border_rouncube"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground"
+                                tools:ignore="UnusedAttribute">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:padding="@dimen/dp_4"
+                                    android:src="@drawable/eling" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_4"
+                                android:layout_marginBottom="@dimen/dp_4"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:text="Eling SPT"
+                                android:textColor="@color/black_tua_hehe"
+                                android:textSize="@dimen/sp_12" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- ICON 1.3 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_4">
+
+                            <RelativeLayout
+                                android:layout_width="@dimen/dp_72"
+                                android:layout_height="@dimen/dp_72"
+                                android:layout_gravity="center"
+                                android:background="@drawable/border_rouncube"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground"
+                                tools:ignore="UnusedAttribute">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:padding="@dimen/dp_4"
+                                    android:src="@drawable/jeknyong" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_4"
+                                android:layout_marginBottom="@dimen/dp_4"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:text="Jeknyong"
+                                android:textColor="@color/black_tua_hehe"
+                                android:textSize="@dimen/sp_12" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- ICON 1.4 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_4">
+
+                            <RelativeLayout
+                                android:layout_width="@dimen/dp_72"
+                                android:layout_height="@dimen/dp_72"
+                                android:layout_gravity="center"
+                                android:background="@drawable/border_rouncube"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground"
+                                tools:ignore="UnusedAttribute">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:padding="@dimen/dp_4"
+                                    android:src="@drawable/lainnya" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_4"
+                                android:layout_marginBottom="@dimen/dp_4"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:text="Lainnya"
+                                android:textColor="@color/black_tua_hehe"
+                                android:textSize="@dimen/sp_12" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
